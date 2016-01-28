@@ -237,7 +237,6 @@ class PBeastDSMethods(object):
         try:
             self.pbeast_data = json.loads(get_pbeast_data.get(**self.parsed_params))
         except Exception as e:
-            import pdb; pdb.set_trace()
 
 
     def parse_input(self, *args, **kwargs):
@@ -245,7 +244,6 @@ class PBeastDSMethods(object):
 
     def transform(self, *args, **kwargs):
         logging.info("Transforming data points from PBeast")
-        import pdb; pdb.set_trace()
         self.models.extend(self.datasource.transform(self.parsed_pbeast,
             self.parsed_params['lumiblock']))
 
